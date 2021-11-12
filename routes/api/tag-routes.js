@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { request } = require('express');
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
@@ -73,6 +74,14 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
+  Tag.destroy({
+    where: {id: req.params.id}
+  })
+  .then(dbTagData => res.json(dbTagData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
