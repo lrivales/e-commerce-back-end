@@ -1,19 +1,34 @@
-# E-commerce Back End Starter Code
+# E-commerce Back End
 
-## User Story
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+## Description
+This is a back-end application for an e-commerce site.  It uses express and sequelize with a MySQL back-end.
 
-## Acceptance Criteria
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia Core for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete data in my database
+### Usage
+Run "node seeds/index.js" to seed the database.
+
+Run "node server.js" to run the application.
+
+There are 3 API endpoints.
+
+- /api/categories
+    - GET / to get all categories.
+    - GET /:id to get category by ID.
+    - POST / to add a new category.
+    - PUT /:id to update a category.
+    - DELETE /:id to delete a category.
+
+- /api/products
+    - GET / to get all products.
+    - GET/:id to get a product by ID.
+    - POST / to a add a product.
+    - PUT /:id to update a product.
+    - DELETE /:id to delete a product.
+
+- /api/tags
+    - GET / to get all tags.
+    - GET/:id to get a tag by ID.
+    - POST / to a add a tag.
+    - PUT /:id to update a tag.
+    - DELETE /:id to delete a tag.
+
+Please visit this URL for a video walkthrough: https://watch.screencastify.com/v/O0D551RaHaJnVKRFkTzf
